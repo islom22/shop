@@ -30,7 +30,7 @@ class ClientController extends Controller
     }
     public function show(){
         //return json_decode(Client::all());
-        $client = Client::all();
+        $client = Client::with('product')->get();
         return response()->json($client);
     }
 }
