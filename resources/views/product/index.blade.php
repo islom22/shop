@@ -16,7 +16,7 @@
                           <input type="text" name="amount"  class="form-control" placeholder="Amount" required> 
                       </div>
                       <div class="col-md-4">
-                     
+                          <input type="text" name="client_id" value="{{ $client->id }}" class="form-control" placeholder="Client_id" required>
                       </div>
                   </div>
               </div>

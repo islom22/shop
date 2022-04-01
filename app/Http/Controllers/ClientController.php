@@ -20,15 +20,13 @@ class ClientController extends Controller
             'family' => 'required|max:255'
         ]);
 
-        Client::create([
+        $client = Client::create([
             'name' =>$request->name,
             'phone' =>$request->phone,
             'family' =>$request->family
         ]);
 
-        
-
-        return view('product.index');
+        return view('product.index', compact('client'));
     }
     public function show(){
         //return json_decode(Client::all());

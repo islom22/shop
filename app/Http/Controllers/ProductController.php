@@ -23,11 +23,11 @@ class ProductController extends Controller
             'amount' => 'required|max:12',
             'client_id' => 'required|max:255'
         ]);
-        $client = Client::orderBy('created_at', 'desc')->first();
+        //$client = Client::orderBy('created_at', 'desc')->first();
         Product::create([
             'title' => $request->title,
             'amount' => $request->amount,
-            'client_id' => $client->id
+            'client_id' => $request->client_id
         ]);
         return view('client.index');
     }
